@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { useSignMessage, useSignTypedData } from 'wagmi'
 import { signTypedDataData } from '.'
@@ -81,8 +81,12 @@ function App() {
 
   }
 
+  useEffect(() => {
+    console.log('11111import.meta.env:', import.meta.env)
+  }, [])
+
   return (
-    <>
+    <div>
       <div>
         <h2>Account</h2>
 
@@ -157,7 +161,13 @@ function App() {
       </div>
 
       {swapError}
-    </>
+
+
+      <p>
+        <div>WC</div>
+        {/* <div>{import.meta.env}</div> */}
+      </p>
+    </div>
   )
 }
 
