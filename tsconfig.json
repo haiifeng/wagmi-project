@@ -7,7 +7,6 @@
     "skipLibCheck": true,
 
     "types": ["@remix-run/cloudflare", "vite/client", "@cloudflare/workers-types/2023-07-01"],
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -27,6 +26,6 @@
       "@/*": ["./src/*"]
     },
   },
-  "include": ["src"],
+  "include": ["vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
