@@ -1,6 +1,6 @@
 import { type Chain } from 'viem';
-import BitlayerChainIcon from '@/components/icons/BitlayerChainIcon';
-import { BaseChainType, NetworkType } from '@/wallets/config/type';
+// import BitlayerChainIcon from '@/components/icons/BitlayerChainIcon';
+import { BaseChainType, NetworkType } from './type';
 
 export const btcTestnetChain = {
   id: 1,
@@ -16,7 +16,8 @@ export const btcTestnetChain = {
   blockExplorers: {
     default: { name: 'Explorer', url: 'https://mempool.space/testnet' },
   },
-} as const satisfies Chain;
+  // } as const satisfies Chain;
+} as any;
 
 export const btcTestnet: BaseChainType = {
   id: 'btc_testnet',
@@ -43,7 +44,8 @@ export const btcMainnetChain = {
   blockExplorers: {
     default: { name: 'Explorer', url: 'https://mempool.space' },
   },
-} as const satisfies Chain;
+  // } as const satisfies Chain;
+} as any;
 
 export const btcMainnet: BaseChainType = {
   id: 'btc_mainnet',
@@ -74,14 +76,15 @@ export const bitlayerTestnetChain = {
   blockExplorers: {
     default: { name: 'Explorer', url: 'https://testnet.btrscan.com' },
   },
-} as const satisfies Chain;
+  // } as const satisfies Chain;
+} as any;
 
 export const bitlayerTestnet: BaseChainType = {
   id: 'bitlayer_testnet',
   name: 'Bitlayer Testnet',
   symbol: 'BITLAYER_TEST',
   chain: bitlayerTestnetChain,
-  icon: BitlayerChainIcon,
+  icon: '',
   testnet: true,
   active: false,
   networkType: NetworkType.evm,
@@ -107,14 +110,15 @@ export const bitlayerMainnetChain = {
   blockExplorers: {
     default: { name: 'Explorer', url: 'https://www.btrscan.com' },
   },
-} as const satisfies Chain;
+  // } as const satisfies Chain;
+} as any;
 
 export const bitlayerMainnet: BaseChainType = {
   id: 'bitlayer_mainnet',
   name: 'Bitlayer',
   symbol: 'BITLAYER',
   chain: bitlayerMainnetChain,
-  icon: BitlayerChainIcon,
+  icon: '',
   testnet: false,
   active: true,
   networkType: NetworkType.evm,
